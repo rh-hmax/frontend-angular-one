@@ -29,7 +29,7 @@ Temos uma API para uma loja genérica e precisamos de um frontend que nos permit
 Se você está realizando este desafio, deve receber o `endpoint` da API assim como os exemplos das requisições em um arquivo json que você poderá importar para seu Insomnia se desejar.
 
 ### Token
-Todas as requisições devem ter a tag `token` no header contendo o token que você recebeu por email, ou a API retornará `Invalid token`.
+Todas as requisições devem ter a tag `token` no header contendo o token que você deve receber por email ou mensagem no slack ou whatsapp, ou a API retornará `Invalid token`.
 
 ### Objeto Product
 
