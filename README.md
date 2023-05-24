@@ -26,17 +26,14 @@ Temos uma API para uma loja genérica e precisamos de um frontend que nos permit
 	- Padrão e clareza de escrita do código
 
 # Sobre a API
-Se você está realizando este desafio, deve receber o `endpoint` da API assim como os exemplos da requisição.
+Se você está realizando este desafio, deve receber o `endpoint` da API assim como os exemplos das requisições em um arquivo json que você poderá importar para seu Insomnia se desejar.
 
 ### Token
-Cada requisição deve enviar a tag `token` no seu header contendo o token que você recebeu em seu email, ou a API retornará `Invalid token`.
+Todas as requisições devem ter a tag `token` no header contendo o token que você recebeu por email, ou a API retornará `Invalid token`.
 
 ### Objeto Product
 
 Segue abaixo um exemplo do objeto completo que será usado nas requests e responses. 
-
-**Atenção!** O id virá no Response, mas não deve ser informado no Body das requisições. Em vez disso, no caso de alteração ou deleção, o id deve ser enviado na url logo após o nome do recurso. Ex.:
-`https://.../products/646e18655527cf4595ea378a`
 
 ```
 {
@@ -57,3 +54,6 @@ Detalhes do objeto **PRODUCT**
 | unit | string | Unidade do produto. Ex.: Lata, Caixa, Unidade, etc |
 | price | number | Preço de venda do produto |
 | active | boolean | Define se o produto está ativo |
+
+**Atenção!** O id do produto virá no Response, mas não deve ser informado no Body das requisições. Em vez disso, no caso de alteração ou deleção, o id deve ser enviado na url logo após o nome do recurso. Ex.:
+`https://.../products/646e18655527cf4595ea378a`
