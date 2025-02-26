@@ -17,7 +17,8 @@ Temos uma API para uma loja genérica e precisamos de um Frontend que nos permit
 	- Só um GERENTE pode ter acesso para INCLUIR, ALTERAR ou REMOVER produtos 	
 
 ### Requisitos não funcionais
-	- O frontend precisa ser desenvolvido em Angular
+	- Precisa ser desenvolvido em Angular
+ 	- Precisa utilizar Tailwind para estilização
  	- Views (telas) devem ser componentes
 
 ### Entrega
