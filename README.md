@@ -1,28 +1,37 @@
 # CRUD Frontend integrado à API
 
 ## História
-Temos uma API para uma loja genérica e precisamos de um frontend que nos permita fazer o CRUD utilizando esta API, conforme os requisitos abaixo:
+Temos uma API para uma loja genérica e precisamos de um Frontend que nos permita interagir com esta API, conforme os requisitos abaixo:
 
 ### Requisitos funcionais
-	- Como gerente gostaria de incluir um novo produto ao catálogo da loja
-	- Como gerente gostaria de alterar um produto existente no catálogo
-	- Como gerente gostaria de remover o produto do meu catálogo da loja
-	- Como gerente gostaria de recuperar uma lista com os produtos disponíveis
-	- Como gerente gostaria de buscar produtos pela sua descrição
+	1. Como GERENTE gostaria de INCLUIR um novo produto ao catálogo da loja
+	2. Como GERENTE gostaria de ALTERAR um produto existente no catálogo
+	3. Como GERENTE gostaria de REMOVER o produto do meu catálogo da loja
+	4. Como GERENTE gostaria de LISTAR produtos cadastrados
+	5. Como GERENTE gostaria de BUSCAR produtos pela sua DESCRIÇÃO
+ 	6. Como GERENTE gostaira que os resultados da LISTA fossem PAGINADOS
+  	7. Como CLIENTE gostaria de VISUALIZAR a LISTA de produtos cadastrados
+
+### Regras de negócio
+	- Só USUÁRIOS AUTENTICADOS podem acessar o sistema
+	- Só um GERENTE pode ter acesso para INCLUIR, ALTERAR ou REMOVER produtos 	
 
 ### Requisitos não funcionais
 	- O frontend precisa ser desenvolvido em Angular
+ 	- Views (telas) devem ser componentes
+  	- Mensagens de erro vindas do Backend ou geradas no frontend, devem ser exibidas para o usuário (??????)
 
 ### Entrega
 	- O projeto deve ser entregue em um repositório GitHub
 	- O link do repositório deve ser enviado para `desenvolvimento@hmax.com.br`
-	- O Readme deve ter as instruções e comando para rodar o projeto
-	- É esperado que o ambiente esteja rodando a aplicação
+	- O Readme deve ter as instruções e comando para rodar o projeto e não depender de plugins da IDE para sua excecução.
+	- O ambiente da aplicação precisa estar rodando e funcionando
 	
 ### Critérios de avaliação
 	- Entendimento dos requisitos
 	- Afinidade com a ferramenta utilizada
-	- Nomenclatura de métodos, arquivos e pastas
+	- Organização de arquivos e pastas
+ 	- Nomenclatura de métodos
 	- Padrão e clareza de escrita do código
 
 # Sobre a API
@@ -33,15 +42,12 @@ Todas as requisições devem ter a tag `token` no header contendo o token que vo
 
 ### Objeto Product
 
-Segue abaixo um exemplo do objeto completo que será usado nas requests e responses. 
-
 ```
 {
 	"id": "646e18655527cf4595ea378a",
-	"name": "Sprite",
+	"name": "Guaraná Antartica",
 	"unit": "Lata",
 	"price": 3.55,
-	"active": true
 }
 ```
 
@@ -55,5 +61,28 @@ Detalhes do objeto **PRODUCT**
 | price | number | Preço de venda do produto |
 | active | boolean | Define se o produto está ativo |
 
-**Atenção!** O id do produto virá no Response, mas não deve ser informado no Body das requisições. Em vez disso, no caso de alteração ou deleção, o id deve ser enviado na url logo após o nome do recurso. Ex.:
+**Atenção!** O id dos objetos virá no Response, mas não devem ser informados no Body das requisições. Em vez disso, no caso de alteração ou deleção, o id deve ser enviado na url logo após o nome do recurso, conforme padrões RESTFul. Ex.:
 `https://.../products/646e18655527cf4595ea378a`
+
+### Objeto User
+
+```
+{
+	"id": "646e18655527cf4595ea378a",
+	"name": "Winston Churchill",
+	"login": "winston@teste.com",
+	"password": "789456",
+	"rules": ["MANAGER", "BASIC"],
+	"active": true
+}
+```
+
+Detalhes do objeto **USER**
+
+| Campo | Tipo | Descrição |
+|---|---|---|
+| id | string | Código do usuário |
+| name | string | Nome do usuário |
+| login | string | Email utilizado para login |
+| password | string | Senha do usuário (descriptografada) |
+| rules | string | Papéis do usuário que definem suas permissões |
