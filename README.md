@@ -19,7 +19,6 @@ Temos uma API para uma loja genérica e precisamos de um Frontend que nos permit
 ### Requisitos não funcionais
 	- O frontend precisa ser desenvolvido em Angular
  	- Views (telas) devem ser componentes
-  	- Mensagens de erro vindas do Backend ou geradas no frontend, devem ser exibidas para o usuário (??????)
 
 ### Entrega
 	- O projeto deve ser entregue em um repositório GitHub
