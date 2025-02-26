@@ -48,6 +48,7 @@ Todas as requisições devem ter a tag `token` no header contendo o token que vo
 	"name": "Guaraná Antartica",
 	"unit": "Lata",
 	"price": 3.55,
+	"active": true
 }
 ```
 
