@@ -86,3 +86,4 @@ Detalhes do objeto **USER**
 | login | string | Email utilizado para login |
 | password | string | Senha do usuário (descriptografada) |
 | rules | string | Papéis do usuário que definem suas permissões |
+| active | boolean | Define se o produto está ativo |
