@@ -71,9 +71,9 @@ Detalhes do objeto **PRODUCT**
 {
 	"id": "646e18655527cf4595ea378a",
 	"name": "Winston Churchill",
-	"login": "winston@teste.com",
+	"email": "winston@teste.com",
 	"password": "789456",
-	"rules": ["MANAGER", "BASIC"],
+	"roles": ["MANAGER", "BASIC"],
 	"active": true
 }
 ```
@@ -84,7 +84,7 @@ Detalhes do objeto **USER**
 |---|---|---|
 | id | string | Código do usuário |
 | name | string | Nome do usuário |
-| login | string | Email utilizado para login |
+| email | string | Email utilizado para login |
 | password | string | Senha do usuário (descriptografada) |
-| rules | array de string | Papéis do usuário que definem suas permissões |
+| roles | array de string | Papéis do usuário que definem suas permissões |
 | active | boolean | Define se o produto está ativo |
