@@ -38,7 +38,7 @@ Temos uma API para uma loja genérica e precisamos de um Frontend que nos permit
 Se você está realizando este desafio, deve receber o `endpoint` da API assim como os exemplos das requisições em um arquivo json que você poderá importar para seu Insomnia se desejar.
 
 ### Token
-Todas as requisições devem ter a tag `token` no header contendo o token que você deve receber por email ou mensagem no slack ou whatsapp, ou a API retornará `Invalid token`.
+Os endpoints são autenticado com Bearer Token, portanto você precisará obter o token na rota de login, conforme exemplo do Insomnia, e utilizar como bearer token nas suas demais requisições.
 
 ### Objeto Product
 
@@ -73,7 +73,7 @@ Detalhes do objeto **PRODUCT**
 	"name": "Winston Churchill",
 	"email": "winston@teste.com",
 	"password": "789456",
-	"roles": ["MANAGER", "BASIC"],
+	"roles": ["GERENTE", "CLIENTE"],
 	"active": true
 }
 ```
