@@ -8,7 +8,7 @@ Temos uma API para uma loja genérica e precisamos de um Frontend que nos permit
 	2. Como GERENTE gostaria de ALTERAR um produto existente no catálogo
 	3. Como GERENTE gostaria de REMOVER o produto do meu catálogo da loja
 	4. Como GERENTE gostaria de LISTAR produtos cadastrados
-	5. Como GERENTE gostaria de BUSCAR produtos pela sua DESCRIÇÃO
+	5. Como GERENTE gostaria de BUSCAR produtos pelo NOME
  	6. Como GERENTE gostaira que os resultados da LISTA fossem PAGINADOS
   	7. Como CLIENTE gostaria de VISUALIZAR a LISTA de produtos cadastrados
 
